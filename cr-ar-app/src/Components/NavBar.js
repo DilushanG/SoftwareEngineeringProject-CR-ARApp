@@ -1,10 +1,15 @@
+import "../Styles/main.css";
+import { Box } from "./Box";
+
 
 function NavBar() {
     return (  
         <header>
-            <h3>
-                
-            </h3>
+            <Box>
+                <label>
+                    AR CR App
+                </label>
+            </Box>
         </header>
     );
 }
