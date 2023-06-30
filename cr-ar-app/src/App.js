@@ -4,7 +4,9 @@ import NavBar from "./Components/NavBar";
 function App() {
   return (
     <React.Fragment>
-      <NavBar/>
+      <header>
+        <NavBar/>
+      </header>
     </React.Fragment>
   );
 }
