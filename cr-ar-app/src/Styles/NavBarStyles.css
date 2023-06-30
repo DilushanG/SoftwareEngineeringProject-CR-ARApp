@@ -8,10 +8,10 @@
     background-color: #F2F8FF;
     box-shadow: 0 5px 10px rgba(0,0,0,0.25);
     width: 95%;
-    height:77px;
+    height:60px;
     border-radius: 0px 0px 25px 25px;
     position: fixed;
-    top: 10px;
+    top: 13px;
     left: 50%;
     transform: translate(-50%);
 }
@@ -30,9 +30,18 @@
     align-items: center;
     text-align: center;
     justify-content: end;
+    white-space: nowrap;
 }
 
 .nav-links{
     text-decoration: none;
     padding: 0.7rem 1rem;
+    white-space: nowrap;
 }
+
+.nav-links:hover{
+    border-radius: 10px;
+    background: var(--new-green, linear-gradient(135deg, #009687 0%, #08C9B6 100%));
+}
+
+
