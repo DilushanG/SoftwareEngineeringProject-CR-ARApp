@@ -18,6 +18,9 @@ function NavBar() {
                         </a></li>
                     )})}
             </ul>
+            <h4>
+                Gowsi Kan 
+            </h4>
         </nav>
     );
 }
