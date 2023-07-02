@@ -42,7 +42,7 @@
 }
 
 .nav-links:hover{
-    border-radius: 10px;
+    border-radius: 8px;
     background: var(--new-green, linear-gradient(135deg, #009687 0%, #08C9B6 100%));
 }
 
