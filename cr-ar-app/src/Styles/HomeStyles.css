@@ -14,7 +14,6 @@
     font-size: 1.2rem;
     width: 1354px;
     height: 972.195px;
-    padding: 29px 372px 780.804px 380px;
     position: fixed;
     top: 170px;
     left: 50%;
@@ -75,7 +74,6 @@
   
   .box .h {
     height: 108px;
-    left: 0;
     position: fixed;
     top: 0;
     width: 711px;
@@ -83,9 +81,9 @@
   
   .box .overlap-group {
     height: 109px;
-    left: 69px;
     position: relative;
-    top: -2px;
+    top: 50px;
+    left: 14%;
     width: 575px;
   }
   
@@ -95,12 +93,10 @@
     font-size: 52.4px;
     font-weight: 500;
     height: 55px;
-    left: 0;
     letter-spacing: -0.57px;
     line-height: 54px;
     position: absolute;
     text-align: center;
-    top: 0;
     white-space: nowrap;
   }
   
@@ -129,6 +125,55 @@
   
   .box .text-wrapper-2 {
     color: #ef5a3c;
+  }
+
+  .box .text-wrapper-3 {
+    color: #ffffff;
+    font-family: "Inter-Medium", Helvetica;
+    font-size: 14.2px;
+    font-weight: 500;
+    height: 21px;
+    left: 41px;
+    letter-spacing: -0.15px;
+    line-height: 20.4px;
+    position: absolute;
+    text-align: center;
+    top: 7px;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .box .button-wrapper {
+    border: 0px none;
+    height: 36.39px;
+    position: relative;
+    width: 141.96px;
+  }
+
+  .box .button {
+    background: linear-gradient(180deg, rgb(0, 150, 135) 0%, rgb(8.37, 200.81, 181.57) 100%);
+    border-radius: 12.44px;
+    box-shadow: 0px 1.78px 3.56px -1.78px #0000001a, 0px 3.56px 5.33px -0.89px #0000001a;
+    height: 36px;
+    left: 50%;
+    transform: translate(-50%);
+    overflow: hidden;
+    position: fixed;
+    top: 436px;
+    width: 142px;
+  }
+
+  .box .arrow {
+    height: 15px;
+    left: 98px;
+    position: absolute;
+    top: 10px;
+    width: 14px;
+  }
+
+  .box .button:hover {
+    border-radius: 12.44px;
+    background: var(--new-green, linear-gradient(135deg, #009687 0%, #08C9B6 100%));
   }
   
 
