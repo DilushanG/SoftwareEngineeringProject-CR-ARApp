@@ -1,10 +1,11 @@
 import "../Styles/HomeStyles.css";
 import "../Images/arrow.png";
+import DropDownYear from "./DropDownYear";
 
 function Home() {
-    return (<>
+    return (
     <div className="home">
-        <div className="front">
+      <div className="front">
         <div className="box">
           <div className="h-wrapper">
             <div className="h">
@@ -21,21 +22,22 @@ function Home() {
               </div>
             </div>
           </div>
+        </div>
       </div>
-      </div>
+      <DropDownYear/>
       <div className="box">
       <div className="button-wrapper">
         <div className="button">
-          <a className="text-wrapper-3" href="/#">Lets Go</a>
-          <img className="arrow" alt="arrow" src="../Images/arrow.png"/>
+          <a className="text-wrapper-3" href="/#">Lets go</a>
+          <i class="fa fa-arrow-right"></i>
         </div>
       </div>
-    </div>
+      </div>
         <div className="topBox">
-            Welcome GowsiKan
+            Welcome Gowsikan
         </div>
     </div>
-    </>);
+    );
 }
 
 export default Home;
