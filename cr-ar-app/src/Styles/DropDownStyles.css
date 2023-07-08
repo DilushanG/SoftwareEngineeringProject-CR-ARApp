@@ -61,3 +61,10 @@ body{
   border-radius: 8px;
   background: var(--new-green, linear-gradient(135deg, #009687 0%, #08C9B6 100%));
 }
+
+.fa-code-simple{
+  color: black;
+  margin-left: 6.5rem;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}

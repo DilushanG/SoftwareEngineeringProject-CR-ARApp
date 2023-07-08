@@ -3,6 +3,9 @@ import "../Images/arrow.png";
 import DropDownYear from "./DropDownYear";
 import DropDownDepartment from "./DropDownDepartment";
 import DropDownSemester from "./DropDownSemester";
+import studentImage from "../Images/student-1.jpg";
+import newstudentImage from "../Images/newstudent.jpg";
+import viewStudentImage from "../Images/viewStudent.jpg";
 
 function Home() {
     return (
@@ -34,13 +37,20 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="box-1">
+      <div className="topBox">
+        Welcome Gowsikan
+      </div>
+      <div className="image">
+      <div className="student-wrapper">
+        <img className="student-2" alt="Student" src={viewStudentImage} />
+        <img className="student-1" alt="Student" src={newstudentImage} />
+        <img className="student" alt="Student" src={studentImage} />
+      </div>
+    </div>
+    <div className="box-1">
         <div className="h-1"><DropDownYear/>
         <DropDownDepartment/>
         <DropDownSemester/></div>
-      </div>
-      <div className="topBox">
-        Welcome Gowsikan
       </div>
     </div>
     );

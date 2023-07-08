@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../Styles/DropDownStyles.css";
+import 'react-icons/fa';
 
 function DropDownYear() {
   const [isActive, setIsActive] = useState(false);
@@ -8,6 +9,7 @@ function DropDownYear() {
     <div className="dropdown">
       <div className="dropdown-btn" onClick={e => setIsActive(!isActive)}>
         Choose Academic Year
+        <span class="fa fa-code-simple"></span>
       </div>
       {isActive && (
       <div className="dropdown-content">
