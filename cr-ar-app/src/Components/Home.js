@@ -1,6 +1,8 @@
 import "../Styles/HomeStyles.css";
 import "../Images/arrow.png";
 import DropDownYear from "./DropDownYear";
+import DropDownDepartment from "./DropDownDepartment";
+import DropDownSemester from "./DropDownSemester";
 
 function Home() {
     return (
@@ -24,18 +26,22 @@ function Home() {
           </div>
         </div>
       </div>
-      <DropDownYear/>
       <div className="box">
-      <div className="button-wrapper">
-        <div className="button">
-          <a className="text-wrapper-3" href="/#">Lets go</a>
-          <i class="fa fa-arrow-right"></i>
+        <div className="button-wrapper">
+          <div className="button">
+            <a className="text-wrapper-3" href="/#">Lets go</a>
+            <i class="fa fa-arrow-right"></i>
+          </div>
         </div>
       </div>
+      <div className="box-1">
+        <div className="h-1"><DropDownYear/>
+        <DropDownDepartment/>
+        <DropDownSemester/></div>
       </div>
-        <div className="topBox">
-            Welcome Gowsikan
-        </div>
+      <div className="topBox">
+        Welcome Gowsikan
+      </div>
     </div>
     );
 }

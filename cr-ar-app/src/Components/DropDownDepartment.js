@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "../Styles/DropDownStyles.css";
 
-function DropDownYear() {
+function DropDownDepartment() {
   const [isActive, setIsActive] = useState(false);
 
     return ( 
     <div className="dropdown">
       <div className="dropdown-btn" onClick={e => setIsActive(!isActive)}>
-        Choose Academic Year
+        Choose Department
       </div>
       {isActive && (
       <div className="dropdown-content">
@@ -20,4 +20,4 @@ function DropDownYear() {
     );
 }
 
-export default DropDownYear;
+export default DropDownDepartment;
