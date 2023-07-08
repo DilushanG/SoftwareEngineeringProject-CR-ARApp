@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "./Components/NavBar";
 import Home from "./Components/Home";
+import AddStudent from "./Components/AddStudent";
 
 function App() {
   return (
