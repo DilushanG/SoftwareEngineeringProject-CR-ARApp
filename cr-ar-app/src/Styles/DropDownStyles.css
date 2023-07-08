@@ -35,6 +35,7 @@ body{
   display: flex;
   align-items: center;
   cursor: pointer;
+  justify-content: center;
 }
   
 .dropdown .dropdown-content{
@@ -62,9 +63,7 @@ body{
   background: var(--new-green, linear-gradient(135deg, #009687 0%, #08C9B6 100%));
 }
 
-.fa-code-simple{
-  color: black;
-  margin-left: 6.5rem;
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
+.dropdown-btn .icon{
+  margin-left: 0.8rem;
+  font-size: 1rem;
 }

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../Styles/DropDownStyles.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 function DropDownSemester() {
   const [isActive, setIsActive] = useState(false);
@@ -8,6 +10,7 @@ function DropDownSemester() {
     <div className="dropdown">
       <div className="dropdown-btn" onClick={e => setIsActive(!isActive)}>
         Choose Semester
+        <FontAwesomeIcon icon={faCaretDown} className="icon" />
       </div>
       {isActive && (
       <div className="dropdown-content">
