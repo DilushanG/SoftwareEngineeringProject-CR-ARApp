@@ -1,0 +1,17 @@
+
+.body{
+    background-color: aqua;
+}
+
+.table-heading{
+    top: 50px;
+    width: auto;
+    height: auto;
+    padding: 140px 50px;
+    border-collapse: separate;
+    position: absolute;
+}
+
+.t-heading{
+    
+}
