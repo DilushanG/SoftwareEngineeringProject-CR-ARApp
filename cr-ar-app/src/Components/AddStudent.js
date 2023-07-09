@@ -3,7 +3,7 @@ function AddStudent() {
     return ( <div className="student">
         <h1>
         <div className="head">
-        <span className="text">student </span>
+        <span className="text">students </span>
         </div>
         </h1>
        
