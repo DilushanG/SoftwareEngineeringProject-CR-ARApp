@@ -1,4 +1,4 @@
-import "../Styles/StudentStyle.css";
+import "../Styles/AdvisorStyle.css";
 import SearchBar from './SearchBar';
 import Table from './Table';
 import DropDownYear from "./DropDownYear";
@@ -15,19 +15,19 @@ function advisor(){
 
     return(
         <div className="box">
-        Advisors
+            <div className="advisorTitle">
+            Advisors
+            </div>
         <div className="SearchBar">
-        <SearchBar onSearch={handleSearch} />
-        <div className="box">
-        <div className="box-1">
-        <div className="h-1"><DropDownYear/>
+        <SearchBar onSearch={handleSearch} name="Search Advisor" />
+        <div className="box-2">
+        <div className="h-2">
+        <DropDownYear/>
         <DropDownDepartment/>
         <DropDownSemester/></div>
-      </div>
         </div>
         </div>
         </div>
-        
     );
 }
 export default advisor;
