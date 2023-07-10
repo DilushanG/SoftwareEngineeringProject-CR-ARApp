@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+body{ 
+  background: #F2F8FF;
+}
+
+.container{
+  width: 600px;
+  height: 80vh;
+}
+
+.dropdown{
+  width: 800px;
+  margin: 10px auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown .dropdown-btn{
+  padding: 8px 20px;
+  width: 200px;
+  background: #F2F8FF;
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.01);
+  border-radius: 10px;
+  font-weight: 500px;
+  color: black;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+}
+  
+.dropdown .dropdown-content{
+  position: absolute;
+  top: 110%;
+  left: 0;
+  padding: 5px;
+  background: #F2F8FF;
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.01);
+  border-radius: 10px;
+  font-weight: bold;
+  color: black;
+  width: 200px;
+  align-items: center;
+}
+
+.dropdown .dropdown-content .dropdown-item{
+  padding: 6px;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.dropdown .dropdown-content .dropdown-item:hover{
+  border-radius: 8px;
+  background: var(--new-green, linear-gradient(135deg, #009687 0%, #08C9B6 100%));
+}
+
+.dropdown-btn .icon{
+  margin-left: 0.8rem;
+  font-size: 1rem;
+}
