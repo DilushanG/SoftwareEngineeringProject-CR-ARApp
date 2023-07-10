@@ -1,7 +1,13 @@
 import React from "react";
 import "./Styles/main.css";
 import NavBar from "./Components/NavBar";
+import Advisor from "./Components/advisor";
 import Home from "./Components/Home";
+
+
+
+//import CourseTable from "./Components/CourseTable";
+import Student from "./Components/Student";
 import AddStudent from "./Components/AddStudent";
 import Table from "./Components/Table";
 
@@ -23,7 +29,10 @@ function App() {
       <header>
         <NavBar/>
       </header>
-      <Table list={list} colNames={colNames} />
+      
+
+      <Student />
+      <Advisor />
     </React.Fragment>
   );
 }
