@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
 
 
 .box{
@@ -72,3 +72,37 @@
   .button-text {
     margin-left: 4px; 
   }
+
+.Dropdown-wrapper{
+  border: 0px none;
+  height: 750px;
+  width: 1800px;
+
+}
+
+.box-2{
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  padding: 0 0px;
+  width: 100px;
+  height: 60px;
+  position: fixed;
+  top: 150px;
+  left: 2%;
+}
+
+.h-2{
+  display: grid;
+  grid-template-columns: repeat(3,250px);
+  grid-gap: 5px;
+  list-style: none;
+  align-items: center;
+  text-align: center;
+  justify-content: end;
+  white-space: nowrap;
+  letter-spacing: -0.4px;
+  font-weight: 500;
+  
+}
+  

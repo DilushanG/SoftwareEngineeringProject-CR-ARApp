@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import '../Styles/SearchBar.css';
 
-function SearchBar({ onSearch }) {
+function SearchBar({ onSearch,name }) {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleInputChange = (event) => {
@@ -22,7 +22,7 @@ function SearchBar({ onSearch }) {
         </button>
         <input
           type="text"
-          placeholder="Search Student"
+          placeholder={name}
           value={searchTerm}
           onChange={handleInputChange}
           className="search-input"

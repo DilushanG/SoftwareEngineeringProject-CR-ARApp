@@ -9,12 +9,19 @@ function AddStudent() {
        
           <div className="button">
             <div className="position" >
-            <a className="text-wrapper-3" href="/#">back</a>
+            <a className="text-wrapper" href="/#">back</a>
             <i class="fa fa-arrow-right"></i>
           
             </div>
-          
-      </div>
+          </div>
+          <div className="box1">
+            <div className="box2">
+              <div className="box3">
+              <span className="text">students </span>
+              </div>
+            </div>
+
+          </div>
         </div> );
 }
 
