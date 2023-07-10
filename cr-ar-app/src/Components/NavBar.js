@@ -1,7 +1,5 @@
 import "../Styles/NavBarStyles.css";
-import { Box } from "./Box";
 import { MenuData } from "./MenuData";
-import { imageSrc } from "../Images/appLogo.png";
 
 
 function NavBar() {

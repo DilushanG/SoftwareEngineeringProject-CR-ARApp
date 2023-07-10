@@ -3,24 +3,24 @@ import "../Styles/DropDownStyles.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
-function DropDownYear() {
+function DropDownSemester() {
   const [isActive, setIsActive] = useState(false);
 
     return ( 
     <div className="dropdown">
       <div className="dropdown-btn" onClick={e => setIsActive(!isActive)}>
-        Choose Academic Year
+        Choose Semester
         <FontAwesomeIcon icon={faCaretDown} className="icon" />
       </div>
       {isActive && (
       <div className="dropdown-content">
-        <div className="dropdown-item">2018/2019</div>
-        <div className="dropdown-item">2019/2020</div>
-        <div className="dropdown-item">2020/2021</div>
+          <div className="dropdown-item">Semester 1</div>
+          <div className="dropdown-item">Semester 2</div>
+          <div className="dropdown-item">Semester 3</div>
       </div>
       )}
     </div>
     );
 }
 
-export default DropDownYear;
+export default DropDownSemester;
