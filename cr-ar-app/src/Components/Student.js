@@ -4,6 +4,10 @@ import NewStudentButton from "./NewStudentButton";
 import DropDownYear from "./DropDownYear";
 import React, { useState } from 'react';
 import "../Styles/main.css"
+import "../Styles/HomeStyles.css";
+
+import DropDownDepartment from "./DropDownDepartment";
+import DropDownSemester from "./DropDownSemester";
 
 function Student(){
     const handleNewStudent = () => {
@@ -16,16 +20,24 @@ function Student(){
       };
 
     return(
+      <div>
         <div className="box">
         Students
         <div className="SearchBar">
         <SearchBar onSearch={handleSearch} />
         <div className="box">
         <NewStudentButton onClick={handleNewStudent} />
+        <div className="box-2">
+        <div className="h-2"><DropDownYear/>
+        <DropDownDepartment/>
+        <DropDownSemester/></div>
+        </div>
+        </div>
+        </div>
+        </div>
+      
+      </div>
         
-        </div>
-        </div>
-        </div>
         
     );
 }
