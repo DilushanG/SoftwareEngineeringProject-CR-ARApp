@@ -1,11 +1,13 @@
 import React from "react";
 import "./Styles/main.css";
 import NavBar from "./Components/NavBar";
+import Advisor from "./Components/advisor";
 import Home from "./Components/Home";
 
 
-import Student from "./Components/Student";
 
+//import CourseTable from "./Components/CourseTable";
+import Student from "./Components/Student";
 import AddStudent from "./Components/AddStudent";
 import Table from "./Components/Table";
 
@@ -28,8 +30,9 @@ function App() {
         <NavBar/>
       </header>
       
-=======
+
       <Student />
+      <Advisor />
     </React.Fragment>
   );
 }
