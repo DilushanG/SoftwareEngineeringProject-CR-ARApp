@@ -3,6 +3,7 @@ import "./Styles/main.css";
 import NavBar from "./Components/NavBar";
 import Home from "./Components/Home";
 
+
 import Student from "./Components/Student";
 
 import AddStudent from "./Components/AddStudent";
@@ -28,7 +29,7 @@ function App() {
       </header>
       
 =======
-      <Table list={list} colNames={colNames} />
+      <Student />
     </React.Fragment>
   );
 }
