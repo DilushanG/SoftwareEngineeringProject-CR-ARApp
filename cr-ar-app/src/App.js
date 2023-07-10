@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "./Components/NavBar";
 import Home from "./Components/Home";
+import Student from "./Components/Student";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <header>
         <NavBar/>
       </header>
-      <Home/>
+      
     </React.Fragment>
   );
 }
