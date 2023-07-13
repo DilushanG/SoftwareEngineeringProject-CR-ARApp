@@ -30,7 +30,7 @@ function App() {
         <NavBar/>
       </header>
       
-   
+   <Student />
     </React.Fragment>
   );
 }
