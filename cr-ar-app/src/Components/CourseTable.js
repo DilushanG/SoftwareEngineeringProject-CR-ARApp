@@ -13,17 +13,7 @@ import DropDownDepartment from "./DropDownDepartment";
 import DropDownSemester from "./DropDownSemester";
 import DownloadButton from "./DownloadButton";
 
-const list = [
-    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"},
-    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"},
-    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"},
-    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"},
-    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"},
-    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"},
-    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"}
-  ];
-  
-  const colNames = ['Code','Course','Credit','Core/Technical','Coordinator','Prerequiste','Status'];
+
   
   function CourseTable() {
     
@@ -35,6 +25,17 @@ const list = [
       // Perform search logic here using the searchTerm
       console.log('Download:', Term);
     };
+    const list = [
+    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"},
+    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"},
+    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"},
+    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"},
+    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"},
+    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"},
+    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"}
+  ];
+  
+  const colNames = ['Code','Course','Credit','Core/Technical','Coordinator','Prerequiste','Status'];
     
     return (
       
@@ -49,18 +50,20 @@ const list = [
         <DropDownDepartment/>
         <DropDownSemester/></div>
 
+        
+
+       
+        </div>
+        </div>
+        </div>
+        </div>
         <div>
         <Table list={list} colNames={colNames}/>
         </div>
-
-        <div>
+         <div>
           <DownloadButton onClick={handledownload} />
         </div>
 
-        </div>
-        </div>
-        </div>
-        </div>
       
       </div>
       
