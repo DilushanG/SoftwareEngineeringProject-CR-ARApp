@@ -4,8 +4,10 @@ import Table from './Table';
 import DropDownYear from "./DropDownYear";
 import DropDownDepartment from "./DropDownDepartment";
 import DropDownSemester from "./DropDownSemester";
+import Tickbox from './TickBox';
 import React, { useState } from 'react';
 import "../Styles/main.css"
+import AdvisorTable from "./AdvisorTable";
 
 function advisor(){
     const handleSearch = (searchTerm) => {
@@ -19,7 +21,7 @@ function advisor(){
         { REG_NUMBER: "2019/E/032",NAME: "Dilushan G",ADVISOR: "Dr. Kaneshwaran"}
       ];
 
-      const colNames = ['REG_NUMBER','NAME','ADVISOR'];
+      const colNames = [' ','REG_NUMBER','NAME','ADVISOR'];
 
     return(
         <div>
@@ -36,10 +38,15 @@ function advisor(){
         <DropDownSemester/></div>
         </div>
         </div>
+        <label>
+            <input type="checkbox"/>
+            <span class="checkbox"></span>
+                
+        </label>
         </div>
-
+        
         <div className = "table">
-            <Table list={list} colNames={colNames} />
+            <AdvisorTable list={list} colNames={colNames} />
         </div>
         </div>
     );
