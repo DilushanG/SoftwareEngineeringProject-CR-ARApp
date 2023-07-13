@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
+import "../Styles/Tickbox.css";
+import "../Styles/main.css";
 
-function TickBox(props) {
-    const { checked, onChange } = props;
-  
-    return (
-      <label>
-        <input type="checkbox" checked={checked} onChange={onChange} />
-        <span>Tick Box</span>
-      </label>
-    );
-  }
-  
-  export default TickBox;
-  
+const TickBox = () => {
+  const [checked, setChecked] = useState(false);
+
+  const handleCheckboxChange = () => {
+    setChecked(!checked);
+  };
+
+  return (
+    <label>
+      <input
+        type="checkbox"
+        checked={checked}
+        onChange={handleCheckboxChange}
+      />
+      Checkbox Label
+    </label>
+  );
+};
+
+export default TickBox;
