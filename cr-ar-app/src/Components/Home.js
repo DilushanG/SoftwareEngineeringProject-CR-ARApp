@@ -11,23 +11,21 @@ function Home() {
     return (
     <div className="home">
       <div className="front">
-        <div className="box">
-          <div className="h-wrapper">
-            <div className="h">
-              <div className="overlap-group">
-                <h1 className="the-expert-in">
-                  <span className="text-wrapper">The Expert, </span>
-                  <span className="span">in Anything</span>
-                </h1>
-                <div className="was-once-a-beginner">
-                  <span className="span">was once</span>
-                  <span className="text-wrapper-2">&nbsp;</span>
-                  <span className="text-wrapper">A Beginner.</span>
-                </div>
-              </div>
-            </div>
-          </div>
+      </div>
+      <div className="h1-h1x">
+      <div>
+        <div className="h1-the-expert-in-anyth">
+          <p className="h1-the-expert-text-0x">The Expert,</p>
+          <p className="h1-in-anything-text-1x">in Anything</p>
         </div>
+      </div>
+      <div>
+        <div className="h1-was-once-abeginner">
+          <p className="h1-was-once-text-0x">was once</p>
+          <p className="h1-component-text-1x"> </p>
+          <p className="h1-abeginner-text-2x">A Beginner.</p>
+        </div>
+      </div>
       </div>
       <div className="box">
         <div className="button-wrapper">
