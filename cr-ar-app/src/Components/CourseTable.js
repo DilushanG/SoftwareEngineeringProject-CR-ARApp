@@ -1,41 +1,74 @@
+import "../Styles/StudentStyle.css";
+import SearchBar from './SearchBar';
+
+import DropDownYear from "./DropDownYear";
+import React, { useState } from 'react';
+import "../Styles/main.css"
 import "../Styles/HomeStyles.css";
-import "../Images/arrow.png";
-//import DropDownYear from "./DropDownYear";
-import "../Styles/CourseTable.css";
+import Table from "./Table";
 
-function CourseTable() {
+
+
+import DropDownDepartment from "./DropDownDepartment";
+import DropDownSemester from "./DropDownSemester";
+import DownloadButton from "./DownloadButton";
+
+const list = [
+    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"},
+    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"},
+    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"},
+    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"},
+    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"},
+    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"},
+    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"}
+  ];
+  
+  const colNames = ['Code','Course','Credit','Core/Technical','Coordinator','Prerequiste','Status'];
+  
+  function CourseTable() {
+    
+    const handleSearch = (searchTerm) => {
+      // Perform search logic here using the searchTerm
+      console.log('Search term:', searchTerm);
+    };
+    const handledownload = (Term) => {
+      // Perform search logic here using the searchTerm
+      console.log('Download:', Term);
+    };
+    
     return (
-    
-               
-                <div>
-                    <table className="Ctable">
-                        <tr className="Crow">
-                            <th className="numColumn">Number</th>
-                            <th className="codeColumn">Code</th>
-                            <th className="nameColumn">Course Name</th>
-                            <th className="creditColumn">Credit</th>
-                            <th className="ctColumn">Core/Technical</th>
-                            <th className="coorColumn">Coordinator</th>
-                            <th className="preColumn">Prerequesite</th>
-                            <th className="regColumn">Registration date</th>
-                            <th className="statusColumn">Status</th>
-                        </tr>
-                        <tr className="dataRow">
-                            <td className="dataCell">01</td>
-                            <td className="dataCell">EC 6060</td>
-                            <td className="dataCell">Software Engineering</td>
-                            <td className="dataCell">03</td>
-                            <td className="dataCell">Core</td>
-                            <td className="dataCell">Dr. J. Jarachchanthan</td>
-                            <td className="dataCell">No</td>
-                            <td className="dataCell">2019-01-19 - 2019-01-31</td>
-                            <td className="dataCell">Closed</td>
-                        </tr>
-                    </table>       
-                </div>
-         
-    
-    );
-}
+      
+      <div>
+        <div className="box">
+        Course
+        <div className="SearchBar">
+        <SearchBar onSearch={handleSearch} />
+        <div className="box">
+        <div className="box-2">
+        <div className="h-2"><DropDownYear/>
+        <DropDownDepartment/>
+        <DropDownSemester/></div>
 
-export default CourseTable;
+        <div>
+        <Table list={list} colNames={colNames}/>
+        </div>
+
+        <div>
+          <DownloadButton onClick={handledownload} />
+        </div>
+
+        </div>
+        </div>
+        </div>
+        </div>
+      
+      </div>
+      
+      
+        
+
+      
+    );
+  }
+  
+  export default CourseTable;
