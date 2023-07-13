@@ -1,7 +1,10 @@
 .Ctable{
-    width: 1800px;
-    height: 506px;
-    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #F2F8FF;
 
 }
 

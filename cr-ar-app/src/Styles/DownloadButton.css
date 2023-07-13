@@ -1,0 +1,15 @@
+downstyle{
+    display: flex;
+    width: 239px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    top: 1004px;
+    left: 1620px;
+    transform: 100%;
+}
+
+
+
