@@ -30,7 +30,7 @@ function App() {
       <header>
         <NavBar/>
       </header>
-      
+      <Advisor/>
    <CourseTable />
     </React.Fragment>
   );

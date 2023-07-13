@@ -3,7 +3,7 @@
   }
   
   .search-bar {
-    width: 1400px;
+    width: 1200px;
     height: 42px;
     flex-shrink: 0;
     display: flex;
@@ -37,6 +37,7 @@
   
   .search-icon {
     font-size: 20px;
+    color :#009687
   }
   
   .search-button:hover {
