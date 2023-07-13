@@ -1,111 +1,152 @@
+.search-bar-search-bar {
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    gap: 54px;
+    width: 100%;
+    position: fixed;
+    top: 100px;
+}
+  
+.search-bar-frame-5077x {
+    font-weight: 500px;
+    text-align: left;
+    color: rgba(0, 150, 135, 1);
+    font-family: Work Sans;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 62px;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
+.search-bar-students {
+    width: 260px;
+    letter-spacing: -0.02em;
+    font-size: 30px;
+}
 
-
-.box{
-
+.box-1{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 206px;
-    height: 50px;
-    flex-shrink: 0;
+    padding: 0 0px;
+    height: 60px;
     position: fixed;
-    top: 100px;
-    left: 3%;
-    
-   
-    color: #009687;
-    font-family: Work Sans;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: -0.6px;
+    top: 144px;
+    left: 0;
 }
 
-.box .studentTitle{
-    color: #009687;
-    font-family: Work Sans;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: -0.6px;
-}
-.new-student-button {
-    display: flex;
-    width: 132px;
-    flex-direction: row;
-    align-items: center; 
-    justify-content: center; 
-    flex-shrink: 0;
-    color: var(--white, #FFF);
+.h-1{
+    display: grid;
+    grid-template-columns: repeat(3,220px);
+    grid-gap: 5px;
+    list-style: none;
+    align-items: center;
     text-align: center;
-    font-family: Poppins;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    letter-spacing: 0.13px;
-    background-color: var(--primary-color, #009687);
-    border: none;
-    border-radius: 4px;
-    padding: 8px;
-    cursor: pointer;
-    outline: none;
-    transition: background-color 0.3s ease;
-    top: 50px;
-    margin-left: 1650px;
-   
-  }
-  
-  .new-student-button:hover {
-    background-color: var(--primary-color-hover, #008478);
-  }
-  
-  .plus-icon {
-    margin-right: 4px; 
-    font-size: 18px;
-  }
-  
-  .button-text {
-    margin-left: 4px; 
-  }
-
-.Dropdown-wrapper{
-  border: 0px none;
-  height: 750px;
-  width: 1800px;
-
+    justify-content: end;
+    white-space: nowrap;
+    letter-spacing: -0.4px;
+    font-weight: 500;
 }
 
-.box-2{
+.dropdown-wrapper{
+  padding-left: 100px;
+}
+
+.table-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F2F8FF;
+    top: 100px;
+}
+
+.table{
+    display: block;
+    border-collapse: collapse;
+    overflow: hidden;
+    table-layout: fixed;
+    border-radius: 10px;
+    white-space: nowrap;
+    width: 90%;
+    max-width: 95%;
+    overflow-x: auto;
+    position: fixed;
+}
+
+.table thead{
+    background-color: var(--white, #ffffff);
+    color: var(--gray, #69686A);
+}
+
+.table tbody{
+    background-color: var(--white, #FFF);
+    color: var(--gray, #69686A);
+}
+
+.table th, 
+.table td{
+    padding: 0.8rem;
+} 
+
+.table td{
+    border-top: 0.5px solid #ddd;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.table tbody tr:hover{
+    background-color: #F2F8FF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
+}
+
+.expand{
+    width: 16%;
+}
+
+.button {
   display: flex;
-  justify-content: space-between;
-  align-items: left;
-  padding: 0 0px;
-  width: 100px;
-  height: 60px;
-  position: fixed;
-  top: 150px;
-  left: 2%;
-}
-
-.h-2{
-  display: grid;
-  grid-template-columns: repeat(3,250px);
-  grid-gap: 5px;
-  list-style: none;
   align-items: center;
-  text-align: center;
-  justify-content: end;
-  white-space: nowrap;
-  letter-spacing: -0.4px;
-  font-weight: 500;
-  
+  justify-content: center;
+  border-radius: 4px;
+  padding: 0.3rem;
+  color: white;
+  font-weight: bold;
 }
 
+.label-core{
+    background-color: #07af23d7;
+    border-radius: 4px;
+    width: 60px;
+    height: 30px;
+    border: none;
+    font-weight: bold;
+}
 
+.label-technical{
+    background-color: rgb(238, 154, 29);
+    border-radius: 4px;
+    width: 60px;
+    height: 30px;
+    border: none;
+    font-weight: bold;
+}
 
-  
+.label-remove{
+    background-color: rgb(253, 87, 87);
+    border-radius: 4px;
+    width: 60px;
+    height: 30px;
+    border: none;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.label-remove:hover{
+    background: linear-gradient(360deg, rgb(0, 150, 135) 0%, rgb(8.37, 200.81, 181.57) 100%);
+    cursor: pointer;
+}
