@@ -10,8 +10,10 @@ import DropDownDepartment from "./DropDownDepartment";
 import DropDownSemester from "./DropDownSemester";
 import Table from "./Table";
 import MainHead from "./MainHead";
+import Modal from "./Modal";
 
 function NewSemester() {
+  const [modalOpen, setModalOpen] = useState(false);
 
   const list = [
     {
@@ -128,7 +130,7 @@ function NewSemester() {
       </div>
       <div className="search-bar-search-bar">
         <div className="search-bar-frame-5077x">
-          <p className="search-bar-students">Add a New Semester</p>
+          <p className="search-bar-students">Add New Semester</p>
         </div>
       </div>
       <div className="box-1">
@@ -137,6 +139,26 @@ function NewSemester() {
             <DropDownYear />
             <DropDownDepartment />
             <DropDownSemester />
+          </div>
+        </div>
+      </div>
+      <div className="button-button-wrapper">
+        <div className="button-wrapper">
+          <div className="button-h1">
+            <button className="button-open-semester">Open Semester</button>
+          </div>
+        </div>
+      </div>
+      <div className="button-button-wrapper">
+        <div className="button-wrapper">
+          <div className="button-h1">
+            <button
+              className="button-open-semester"
+              onClick={() => setModalOpen(true)}
+            >
+              Add New Course
+            </button>
+            {modalOpen && <Modal />}
           </div>
         </div>
       </div>
