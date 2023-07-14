@@ -149,11 +149,11 @@ function NewSemester() {
           </div>
         </div>
       </div>
-      <div className="button-button-wrapper">
-        <div className="button-wrapper">
-          <div className="button-h1">
+      <div className="button-button-wrapper-1">
+        <div className="button-wrapper-1">
+          <div className="button-h2">
             <button
-              className="button-open-semester"
+              className="button-new-course"
               onClick={() => setModalOpen(true)}
             >
               Add New Course

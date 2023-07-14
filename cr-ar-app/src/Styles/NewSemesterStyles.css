@@ -168,7 +168,7 @@
 }
 
 .button-wrapper {
-    padding-left: 1600px;
+    padding-left: 1640px;
 }
 
 .button-h1{
@@ -187,16 +187,17 @@
 .button-open-semester {
   background-color: #009687;
   border-radius: 16px;
-  width: 220px;
-  height: 30px;
+  width: 180px;
+  height: 38px;
   border: none;
-  font-weight: bold;
+  font-weight: 400;
   color: #ffffff;
-  box-shadow: 0px 5px 5px #ccc;
+  font-size: medium;
+  box-shadow: 0px 2px 2px #ccc;
 }
 
 .button-open-semester:hover{
-    background: var(--new-green, linear-gradient(135deg, #009687 0%, #08C9B6 100%));
+    background: var(--new-green, linear-gradient(135deg, #009687 50%, #08C9B6 100%));
     cursor: pointer;
 }
 
@@ -208,12 +209,12 @@
     padding: 0 0px;
     height: 60px;
     position: fixed;
-    top: 850px;
+    top: 166px;
     left: 0;
 }
 
 .button-wrapper-1 {
-    padding-left: 1600px;
+    padding-left: 1640px;
 }
 
 .button-h2{
@@ -231,16 +232,17 @@
 
 .button-new-course {
   background-color: #009687;
-  border-radius: 16px;
-  width: 220px;
-  height: 30px;
+  border-radius: 10px;
+  width: 180px;
+  height: 39px;
   border: none;
-  font-weight: bold;
+  font-weight: 400;
   color: #ffffff;
-  box-shadow: 0px 5px 5px #ccc;
+  font-size: medium;
+  box-shadow: 0px 2px 2px #ccc;
 }
 
-.button-new-course{
+.button-new-course:hover{
   background: var(--new-green, linear-gradient(135deg, #009687 0%, #08C9B6 100%));
   cursor: pointer;
 }

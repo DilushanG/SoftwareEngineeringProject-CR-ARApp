@@ -7,21 +7,32 @@ function Modal() {
           <div className="modal">
             <form>
               <div className="form-group">
-                <label htmlFor="Page">Page</label>
-                <input name="Page" />
+                <label htmlFor="Code">Course Code</label>
+                <input name="Code" />
               </div>
               <div className="form-group">
-                <label htmlFor="Description">Description</label>
-                <input name="Description" />
+                <label htmlFor="Course">Course Name</label>
+                <input name="Course" />
               </div>
               <div className="form-group">
-                <label htmlFor="status">Status</label>
-                <select name="status">
+                <label htmlFor="Credit">Credit</label>
+                <input name="Credit" />
+              </div>
+              <div className="form-group">
+                <label htmlFor="Core">Core/Technical</label>
+                <select name="Core">
                   <option value="Core">Core</option>
                   <option value="Technical">Technical</option>
                 </select>
               </div>
-              <button type="submit" className="btn">Submit</button>
+              <div className="form-group">
+                <label htmlFor="Coordinator">Coordinator</label>
+                <input name="Coordinator" />
+              </div>
+
+              <button type="submit" className="btn">
+                Submit
+              </button>
             </form>
           </div>
         </div>
