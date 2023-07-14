@@ -31,7 +31,7 @@ function App() {
       <header>
         <NavBar/>
       </header>
-      <NewSemester/>
+    
     </React.Fragment>
   );
 }

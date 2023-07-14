@@ -29,7 +29,13 @@ function Modal() {
                 <label htmlFor="Coordinator">Coordinator</label>
                 <input name="Coordinator" />
               </div>
-
+              <div className="form-group">
+                <label htmlFor="Prequiste">Prequiste</label>
+                <select name="Prequiste">
+                  <option value="OperatingSystem">Operating System</option>
+                  <option value="SoftwareEngineering">SoftwareEngineering</option>
+                </select>
+              </div>
               <button type="submit" className="btn">
                 Submit
               </button>
