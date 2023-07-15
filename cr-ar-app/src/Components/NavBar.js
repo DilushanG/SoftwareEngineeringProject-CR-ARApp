@@ -1,38 +1,37 @@
 import "../Styles/NavBarStyles.css";
-import { MenuData } from "./MenuData";
+import { Link,useMatch,useResolvedPath } from "react-router-dom";
 
 function NavBar() {
 
-    return (  
-        <nav className="NavbarItems">
-            <a href="/" className="logo">
-                CR AR App
-            </a>
-            <ul className="nav-menu">
-                <CustomLink/>
-            </ul>
-            <h4>
-                Gowsi Kan 
-            </h4>
-        </nav>
+    return (
+      <nav className="NavbarItems">
+        <Link to="/" className="logo">
+          CR AR App
+        </Link>
+        <ul className="nav-menu">
+          <CustomLink to="/students">Student</CustomLink>
+          <CustomLink to="/courses">Course</CustomLink>
+          <CustomLink to="/advisors">Advisor</CustomLink>
+          <CustomLink to="/newsemester">New Semester</CustomLink>
+        </ul>
+        <h4>Gowsi Kan</h4>
+      </nav>
     );
 }
 
 export default NavBar;
 
-function CustomLink() {
-    const path = window.location.pathname;
+function CustomLink({ to, children, ...props}) {
+  const resolvePath = useResolvedPath(to);
+  const isActive = useMatch({ path: resolvePath.pathname, end: true });
+
     return (
       <>
-        {MenuData.map((item, index) => {
-            return (
-                <li key={index} className={path === item.url ? "active" : ""}>
-                <a href={item.url} className={item.cName}>
-                {item.title}
-                </a>
-            </li>
-          );
-        })}
+        <li className={isActive ? "active" : ""}>
+          <Link to={to} className="nav-links">
+            {children}
+          </Link>
+        </li>
       </>
     );
 }
