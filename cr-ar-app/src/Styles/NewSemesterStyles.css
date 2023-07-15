@@ -29,7 +29,7 @@
     white-space: nowrap;
 }
 
-.box-1{
+.box-n{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -41,7 +41,7 @@
     left: 0;
 }
 
-.h-1{
+.h-n{
     display: grid;
     grid-template-columns: repeat(3,220px);
     grid-gap: 5px;
@@ -54,7 +54,7 @@
     font-weight: 500;
 }
 
-.dropdown-wrapper{
+.dropdown-wrapper-n{
   padding-left: 100px;
 }
 

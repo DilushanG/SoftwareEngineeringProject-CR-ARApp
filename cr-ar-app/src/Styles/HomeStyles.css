@@ -194,19 +194,22 @@
     margin-top: 0.5rem;
   }
 
-.box-1{
+.dropdown-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 0px;
-    width: 100px;
+    width: 100%;
     height: 60px;
     position: fixed;
     top: 365px;
-    left: 32%;
 }
 
-.h-1{
+.dropdown-w1{
+  margin-left: 500px;
+}
+
+.dropdown-wrapper{
     display: grid;
     grid-template-columns: repeat(3,250px);
     grid-gap: 5px;
@@ -225,6 +228,7 @@
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  height: 100%;
 }
 
 .image .student-wrapper {
@@ -234,16 +238,17 @@
   width: 100%;
 }
 
-.image .student {
+.image .student-4 {
   height: 70%;
-  width: 62%;
+  object-fit: cover;
   position: fixed;
   top: 699px;
   left: 50%;
-  transform: translate(-50%);
+  transform: translateX(-50%);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  animation: float 6s ease-in-out infinite;
 }
 
 .image .student-1 {
@@ -256,6 +261,7 @@
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  animation: float 6s ease-in-out infinite;
 }
 
 .image .student-2 {
@@ -268,6 +274,19 @@
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%{
+    transform: translate(-50%);
+  }
+  50%{
+    transform: translate(-51%);
+  }
+  100%{
+    transform: translate(-50%);
+  }
 }
 
 .h1-h1x {

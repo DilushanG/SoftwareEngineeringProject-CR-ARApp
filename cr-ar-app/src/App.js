@@ -26,13 +26,35 @@ const list = [
 const colNames = ['Code','Course','Credit','Core/Technical','Coordinator','Prerequiste','Status'];
 
 function App() {
+  
+  let Component
+
+  switch (window.location.pathname) {
+    case "/":
+      Component = Home
+      break;
+    case "/students":
+      Component = Student
+      break;
+    case "/courses":
+      Component = CourseTable
+      break;
+    case "/advisors":
+      Component = Advisor
+      break;
+    case "/newsemester":
+      Component = NewSemester
+      break;
+  }
+
+
   return (
-    <React.Fragment>
+    <>
       <header>
         <NavBar/>
       </header>
-    
-    </React.Fragment>
+      <Component/>
+    </>
   );
 }
 

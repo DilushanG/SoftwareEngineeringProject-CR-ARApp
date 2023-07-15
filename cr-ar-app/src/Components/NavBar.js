@@ -1,20 +1,15 @@
 import "../Styles/NavBarStyles.css";
 import { MenuData } from "./MenuData";
 
-
 function NavBar() {
+
     return (  
         <nav className="NavbarItems">
-            <h1 className="logo">
+            <a href="/" className="logo">
                 CR AR App
-            </h1>
+            </a>
             <ul className="nav-menu">
-                {MenuData.map((item,index)=>{
-                    return(
-                        <li key={index}><a href={item.url} className={item.cName}>
-                            {item.title}
-                        </a></li>
-                    )})}
+                <CustomLink/>
             </ul>
             <h4>
                 Gowsi Kan 
@@ -24,3 +19,20 @@ function NavBar() {
 }
 
 export default NavBar;
+
+function CustomLink() {
+    const path = window.location.pathname;
+    return (
+      <>
+        {MenuData.map((item, index) => {
+            return (
+                <li key={index} className={path === item.url ? "active" : ""}>
+                <a href={item.url} className={item.cName}>
+                {item.title}
+                </a>
+            </li>
+          );
+        })}
+      </>
+    );
+}

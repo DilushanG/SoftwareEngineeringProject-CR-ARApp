@@ -1,22 +1,22 @@
 export const MenuData = [
     {
         title: "Students",
-        url: "#",
+        url: "/students",
         cName: "nav-links",
     },
     {
         title: "Courses",
-        url: "#",
+        url: "/courses",
         cName: "nav-links",
     },
     {
         title: "Advisors",
-        url: "#",
+        url: "/advisors",
         cName: "nav-links",
     },
     {
         title: "New Semester",
-        url: "#",
+        url: "/newsemester",
         cName: "nav-links",
     },
 ]

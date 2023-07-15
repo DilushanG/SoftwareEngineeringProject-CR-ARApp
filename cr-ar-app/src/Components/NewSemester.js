@@ -133,9 +133,9 @@ function NewSemester() {
           <p className="search-bar-students">Add New Semester</p>
         </div>
       </div>
-      <div className="box-1">
-        <div className="dropdown-wrapper">
-          <div className="h-1">
+      <div className="box-n">
+        <div className="dropdown-wrapper-n">
+          <div className="h-n">
             <DropDownYear />
             <DropDownDepartment />
             <DropDownSemester />

@@ -20,6 +20,11 @@
     color: #009687;
     justify-self: start;
     cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.logo:hover{
+    color: #009687;
 }
 
 .nav-menu{
@@ -41,8 +46,17 @@
     white-space: nowrap;
 }
 
+.NavbarItems .active{
+    border-radius: 8px;
+    background: var(--new-green, linear-gradient(135deg, #009687 0%, #08C9B6 100%));
+}
+
 .nav-links:hover{
     border-radius: 8px;
     background: var(--new-green, linear-gradient(135deg, #009687 0%, #08C9B6 100%));
 }
+
+
+
+
 
