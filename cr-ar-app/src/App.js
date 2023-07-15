@@ -13,6 +13,8 @@ import CourseTable from "./Components/CourseTable";
 import NewSemester from "./Components/NewSemester";
 import Modal from "./Components/Modal";
 
+import { Route,Routes } from "react-router-dom";
+
 const list = [
   { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Remove"},
   { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Remove"},
@@ -26,34 +28,18 @@ const list = [
 const colNames = ['Code','Course','Credit','Core/Technical','Coordinator','Prerequiste','Status'];
 
 function App() {
-  
-  let Component
-
-  switch (window.location.pathname) {
-    case "/":
-      Component = Home
-      break;
-    case "/students":
-      Component = Student
-      break;
-    case "/courses":
-      Component = CourseTable
-      break;
-    case "/advisors":
-      Component = Advisor
-      break;
-    case "/newsemester":
-      Component = NewSemester
-      break;
-  }
-
-
   return (
     <>
       <header>
-        <NavBar/>
+        <NavBar />
       </header>
-      <Component/>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/student" element={<Student />}></Route>
+        <Route path="/courses" element={<CourseTable />}></Route>
+        <Route path="/advisors" element={<Advisor />}></Route>
+        <Route path="/newsemester" element={<NewSemester />}></Route>
+      </Routes>
     </>
   );
 }
