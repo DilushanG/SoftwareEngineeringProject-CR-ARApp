@@ -53,8 +53,6 @@ function Student(){
         <Table list={list} colNames={colNames} />
         </div>      
       </div>
-        
-        
     );
 }
 

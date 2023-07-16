@@ -1,0 +1,60 @@
+import "../Styles/MainHead.css";
+import SearchBar from "./SearchBar";
+import NewStudentButton from "./NewStudentButton";
+import { FiPlus } from "react-icons/fi";
+import DropDownDepartment from "./DropDownDepartment";
+import DropDownSemester from "./DropDownSemester";
+import DropDownYear from "./DropDownYear";
+
+function MainHead({title,searchTitle}) {
+    const handleSearch = (searchTerm) => {
+        // Perform search logic here using the searchTerm
+        console.log('Search term:', searchTerm);
+      };
+
+      const handleNewStudent = () => {
+        // Handle the "New Student" button click event
+        console.log('New Student button clicked');
+      };
+
+  return (
+    <>
+      <div className="search-bar-search-bar">
+        <div className="search-bar-frame-5077x">
+          <p className="search-bar-students">{title}</p>
+        </div>
+        <div className="search-bar-search-search_box">
+          <SearchBar onSearch={handleSearch} name={searchTitle} />
+        </div>
+        <div className="search-bar-button">
+          <div className="search-bar-frame">
+            <div className="box">
+              <div className="rectangle-wrapper">
+                <button className="rectangle" onClick={handleNewStudent}>
+                  <FiPlus className="plus-icon" />
+                  <a className="text-wrapper-3" href="/#">
+                    New Student
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="box-1">
+        <div className="dropdown-wrapper">
+          <div className="h-1">
+            <DropDownYear />
+            <DropDownDepartment />
+            <DropDownSemester />
+          </div>
+        </div>
+        <div>
+
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default MainHead;
