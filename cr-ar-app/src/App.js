@@ -14,6 +14,7 @@ import NewSemester from "./Components/NewSemester";
 import Modal from "./Components/Modal";
 
 import { Route,Routes } from "react-router-dom";
+import DropDown from "./Components/DropDown";
 
 const list = [
   { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Remove"},
@@ -33,6 +34,7 @@ function App() {
       <header>
         <NavBar />
       </header>
+      
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/student" element={<Student />}></Route>

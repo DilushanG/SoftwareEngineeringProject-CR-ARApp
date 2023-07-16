@@ -11,6 +11,7 @@ import DropDownSemester from "./DropDownSemester";
 import Table from "./Table";
 import MainHead from "./MainHead";
 import Modal from "./Modal";
+import DropDown from "./DropDown";
 
 function NewSemester() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -136,9 +137,7 @@ function NewSemester() {
       <div className="box-n">
         <div className="dropdown-wrapper-n">
           <div className="h-n">
-            <DropDownYear />
-            <DropDownDepartment />
-            <DropDownSemester />
+            <DropDown/>
           </div>
         </div>
       </div>

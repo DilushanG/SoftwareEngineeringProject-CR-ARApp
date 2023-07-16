@@ -28,8 +28,8 @@ function CustomLink({ to, children, ...props}) {
 
     return (
       <>
-        <li className={isActive ? "active" : ""}>
-          <Link to={to} className="nav-links">
+        <li>
+          <Link to={to} className={isActive ? "active" : "nav-links"}>
             {children}
           </Link>
         </li>

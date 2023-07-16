@@ -6,6 +6,7 @@ import DropDownSemester from "./DropDownSemester";
 import studentImage from "../Images/student-1.jpg";
 import newstudentImage from "../Images/newstudent.jpg";
 import viewStudentImage from "../Images/viewStudent.jpg";
+import DropDown from "./DropDown";
 
 function Home() {
     return (
@@ -47,9 +48,7 @@ function Home() {
         <div className="dropdown-container">
           <div className="dropdown-w1">
             <div className="dropdown-wrapper">
-              <DropDownYear />
-              <DropDownDepartment />
-              <DropDownSemester />
+              <DropDown/>
             </div>
           </div>
         </div>
