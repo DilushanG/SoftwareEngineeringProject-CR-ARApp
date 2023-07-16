@@ -1,4 +1,5 @@
 import "../Styles/NavBarStyles.css";
+
 import { Link,useMatch,useResolvedPath } from "react-router-dom";
 
 function NavBar() {

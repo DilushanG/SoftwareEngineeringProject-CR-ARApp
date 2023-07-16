@@ -47,14 +47,17 @@
 }
 
 .NavbarItems .active{
+    color: white;
     border-radius: 8px;
     background: var(--new-green, linear-gradient(135deg, #009687 0%, #08C9B6 100%));
+    padding-left: 2px;
 }
 
 .nav-links:hover{
     border-radius: 8px;
     background: var(--new-green, linear-gradient(135deg, #009687 0%, #08C9B6 100%));
 }
+
 
 
 
