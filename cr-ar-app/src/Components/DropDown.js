@@ -38,7 +38,6 @@ function DropDown() {
         isSearchable
         className="mb-3"
         theme={customTheme}
-        autoFocus
       />
       <Select
         components={makeAnimated}
@@ -49,7 +48,6 @@ function DropDown() {
         isSearchable
         className="mb-3"
         theme={customTheme}
-        autoFocus
       />
       <Select
         components={makeAnimated}
@@ -60,7 +58,6 @@ function DropDown() {
         isSearchable
         className="mb-3"
         theme={customTheme}
-        autoFocus
       />
     </div>
   );

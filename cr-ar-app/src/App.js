@@ -34,7 +34,7 @@ function App() {
       <header>
         <NavBar />
       </header>
-      
+    
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/student" element={<Student />}></Route>
