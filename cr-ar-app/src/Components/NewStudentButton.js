@@ -2,6 +2,8 @@ import React from 'react';
 import { FiPlus } from 'react-icons/fi';
 import '../Styles/StudentStyle.css';
 
+
+
 function NewStudentButton({ onClick }) {
  
   return (

@@ -80,6 +80,16 @@ function NewSemester() {
       Prerequiste: "Operating System",
       Status: "Remove",
     },
+    {
+      Code: "EC1010",
+      Course: "Software Construction",
+      Credit: "3",
+      Core: "Core",
+      Coordinator: "jananie",
+      Prerequiste: "Operating System",
+      Status: "Remove",
+    },
+    
   ];
 
   const colNames = [
