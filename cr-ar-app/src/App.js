@@ -34,11 +34,6 @@ function App() {
       <header>
         <NavBar />
       </header>
-<<<<<<< HEAD
-      
-   <Student />
-    </React.Fragment>
-=======
     
       <Routes>
         <Route path="/" element={<Home />}></Route>
@@ -48,7 +43,6 @@ function App() {
         <Route path="/newsemester" element={<NewSemester />}></Route>
       </Routes>
     </>
->>>>>>> 18b6f32eb93f1b9128b16bba710f34d284e8640b
   );
 }
 
