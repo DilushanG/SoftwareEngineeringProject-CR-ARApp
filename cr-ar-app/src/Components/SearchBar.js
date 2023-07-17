@@ -27,7 +27,6 @@ function SearchBar({ onSearch,name }) {
           onChange={handleInputChange}
           className="search-input"
         />
-        
       </form>
     </div>
   );

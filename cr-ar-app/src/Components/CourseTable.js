@@ -6,12 +6,14 @@ import React, { useState } from 'react';
 import "../Styles/main.css"
 import "../Styles/HomeStyles.css";
 import Table from "./Table";
+import '../Styles/ExtraFeatureButton.css';
 
 
 
 import DropDownDepartment from "./DropDownDepartment";
 import DropDownSemester from "./DropDownSemester";
 import DownloadButton from "./DownloadButton";
+import ExtraFeatureButton from "./ExtraFeatureButton";
 
 
   
@@ -25,17 +27,21 @@ import DownloadButton from "./DownloadButton";
       // Perform search logic here using the searchTerm
       console.log('Download:', Term);
     };
+
+    const handleExtra = (viewing) =>{
+      console.log('view:', viewing);
+    }
     const list = [
-    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"},
-    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"},
-    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"},
-    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"},
-    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"},
-    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"},
-    { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Close"}
+    { Course: "Software Construction",Code: "EC1010",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System", RegistrationDate: "10.01.2023-30.01.2023", Status: "Close"},
+    { Course: "Software Construction",Code: "EC1010",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System", RegistrationDate: "10.01.2023-30.01.2023", Status: "Close"},
+    { Course: "Software Construction",Code: "EC1010",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System", RegistrationDate: "10.01.2023-30.01.2023", Status: "Close"},
+    { Course: "Software Construction",Code: "EC1010",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System", RegistrationDate: "10.01.2023-30.01.2023", Status: "Close"},
+    { Course: "Software Construction",Code: "EC1010",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System", RegistrationDate: "10.01.2023-30.01.2023", Status: "Close"},
+    { Course: "Software Construction",Code: "EC1010",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System", RegistrationDate: "10.01.2023-30.01.2023", Status: "Close"},
+    { Course: "Software Construction",Code: "EC1010",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System", RegistrationDate: "10.01.2023-30.01.2023", Status: "Close"}
   ];
   
-  const colNames = ['Code','Course','Credit','Core/Technical','Coordinator','Prerequiste','Status'];
+  const colNames = ['Course','Code','Credit','Core/Technical','Coordinator','Prerequiste','RegistrationDate','Status'];
     
     return (
       
@@ -48,21 +54,23 @@ import DownloadButton from "./DownloadButton";
         <div className="box-2">
         <div className="h-2"><DropDownYear/>
         <DropDownDepartment/>
-        <DropDownSemester/></div>
-
+        <DropDownSemester/>
+        <ExtraFeatureButton onClick={handleExtra}/>
         
-
-       
+        </div>     
+               
         </div>
         </div>
         </div>
         </div>
         <div>
         <Table list={list} colNames={colNames}/>
-        </div>
-         <div>
+        <div>
           <DownloadButton onClick={handledownload} />
         </div>
+        </div>
+        
+        
 
       
       </div>

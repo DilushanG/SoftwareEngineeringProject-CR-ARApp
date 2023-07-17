@@ -13,17 +13,12 @@
     border-collapse: collapse;
     overflow: hidden;
     table-layout: fixed;
-<<<<<<< HEAD
-    
-=======
->>>>>>> 18b6f32eb93f1b9128b16bba710f34d284e8640b
     border-radius: 10px;
     white-space: nowrap;
     width: 100em;
     max-width: 80%;
     margin: auto;
     overflow-x: auto;
-    filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.2));
 }
 
 .table thead{
@@ -31,9 +26,30 @@
     color: var(--gray, #69686A);
 }
 
+
 .table tbody{
     background-color: var(--white, #FFF);
     color: var(--gray, #69686A);
+}
+
+.table thead th:nth-child(1),
+.table tbody td:nth-child(1) {
+  width: 10em;
+}
+
+.table thead th:nth-child(2),
+.table tbody td:nth-child(2) {
+  width: 30em;
+}
+
+.table thead th:nth-child(3),
+.table tbody td:nth-child(3) {
+  width: 30em;
+}
+
+.table thead th:nth-child(4),
+.table tbody td:nth-child(4) {
+  width: 30em;
 }
 
 .table th, 
@@ -45,11 +61,12 @@
     border-top: 0.5px solid #ddd;
     overflow: hidden;
     text-overflow: ellipsis;
+    
 }
 
 .table tbody tr:hover{
     background-color: #F2F8FF;
-    filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
 }
 
 .expand{
