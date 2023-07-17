@@ -9,6 +9,7 @@ import "../Styles/HomeStyles.css";
 import DropDownDepartment from "./DropDownDepartment";
 import DropDownSemester from "./DropDownSemester";
 import Table from "./Table";
+import { Icon1, Icon2 } from './MyIcon';
 
 
 function Student(){
@@ -22,9 +23,9 @@ function Student(){
       };
 
       const list = [
-        {Registration_No: "2019/E/001",Name: "Aarthy V",EC1011: "",EC1021: "",EC1022: "",EC10218: "",EC1078: "",Advisor:"jananie",View:"ss"},
-        {Registration_No: "2019/E/114",Name: "Riza",EC1011: "",EC1021: "",EC1022: "",EC10218: "",EC1078: "",Advisor:"jananie",View:"ss"},
-        {Registration_No: "2019/E/039",Name: "Gowsikan",EC1011: "",EC1021: "",EC1022: "",EC10218: "",EC1078: "",Advisor:"jananie",View:"ss"}
+        {Registration_No: "2019/E/001",Name: "Aarthy V",EC1011: <Icon1/>,EC1021: <Icon1/>,EC1022: <Icon1/>,EC10218: <Icon1/>,EC1078: <Icon1/>,Advisor:"jananie",View:"ss"},
+        {Registration_No: "2019/E/114",Name: "Riza",EC1011: <Icon2/>,EC1021: <Icon1/>,EC1022: <Icon2/>,EC10218: <Icon1/>,EC1078: <Icon1/>,Advisor:"jananie",View:"ss"},
+        {Registration_No: "2019/E/039",Name: "Gowsikan",EC1011: <Icon1/>,EC1021: <Icon2/>,EC1022: <Icon1/>,EC10218: <Icon1/>,EC1078: <Icon2/>,Advisor:"jananie",View:"ss"}
       
       ];
       
@@ -34,7 +35,7 @@ function Student(){
       <div>
         <div className="box">
           <div className="studentTitle">
-        Students
+        students
         </div>
         <div className="SearchBar">
         <SearchBar onSearch={handleSearch} name="Search student" />

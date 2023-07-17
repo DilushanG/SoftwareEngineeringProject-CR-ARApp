@@ -31,7 +31,7 @@ function App() {
         <NavBar/>
       </header>
       
-   <CourseTable />
+   <Student />
     </React.Fragment>
   );
 }
