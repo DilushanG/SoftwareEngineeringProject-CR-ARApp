@@ -80,6 +80,16 @@ function NewSemester() {
       Prerequiste: "Operating System",
       Status: "Remove",
     },
+    {
+      Code: "EC1010",
+      Course: "Software Construction",
+      Credit: "3",
+      Core: "Core",
+      Coordinator: "jananie",
+      Prerequiste: "Operating System",
+      Status: "Remove",
+    },
+    
   ];
 
   const colNames = [
@@ -134,13 +144,6 @@ function NewSemester() {
           <p className="search-bar-students">Add New Semester</p>
         </div>
       </div>
-      <div className="box-n">
-        <div className="dropdown-wrapper-n">
-          <div className="h-n">
-            <DropDown/>
-          </div>
-        </div>
-      </div>
       <div className="button-button-wrapper">
         <div className="button-wrapper">
           <div className="button-h1">
@@ -149,6 +152,11 @@ function NewSemester() {
         </div>
       </div>
       <div className="button-button-wrapper-1">
+        <div className="hn2">
+          <div className="h-n">
+            <DropDown />
+          </div>
+        </div>
         <div className="button-wrapper-1">
           <div className="button-h2">
             <button
