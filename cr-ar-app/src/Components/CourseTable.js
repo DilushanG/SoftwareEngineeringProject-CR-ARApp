@@ -7,6 +7,7 @@ import "../Styles/main.css"
 import "../Styles/HomeStyles.css";
 import Table from "./Table";
 import '../Styles/ExtraFeatureButton.css';
+import MainHead from "./MainHead";
 
 
 
@@ -59,28 +60,13 @@ import ExtraFeatureButton from "./ExtraFeatureButton";
     return (
       
       <div>
-        <div className="box">
-        Course
-        <div className="SearchBar">
-        <SearchBar onSearch={handleSearch} />
-        <div className="box">
-        <div className="box-2">
-        <div className="h-2"><DropDownYear/>
-        <DropDownDepartment/>
-        <DropDownSemester/>
-        <ExtraFeatureButton onClick={handleExtra}/>
         
-        </div>     
-               
-        </div>
-        </div>
-        </div>
-        </div>
         <div>
         <Table list={Data} colNames={colNames}/>
         <div>
           <DownloadButton onClick={handledownload} />
         </div>
+        <MainHead title="Courses" searchTitle="Search Courses..." />
         </div>
         
         

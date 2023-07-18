@@ -103,7 +103,7 @@ function NewSemester() {
 
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3300/course")
+    fetch("http://localhost:3300/courses")
       .then((res) => res.json())
       .then((data) => {
         // Extracting only the first 5 columns and the last column from each row of data
