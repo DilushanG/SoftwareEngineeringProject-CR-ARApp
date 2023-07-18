@@ -14,6 +14,7 @@ import DropDownSemester from "./DropDownSemester";
 import Table from "./Table";
 import { Icon1, Icon2 } from "./MyIcon";
 import ExtraFeatureButton from "./ExtraFeatureButton";
+import MainHead from "./MainHead";
 
 function Student() {
   const handleNewStudent = () => {
@@ -79,23 +80,7 @@ function Student() {
 
   return (
     <div>
-      <div className="box">
-        <div className="studentTitle">Students</div>
-        <div className="SearchBar">
-          <SearchBar onSearch={handleSearch} name="Search student" />
-          <div className="box">
-            <NewStudentButton onClick={handleNewStudent} />
-            <div className="box-2">
-              <div className="h-2">
-                <DropDownYear />
-                <DropDownDepartment />
-                <DropDownSemester />
-                <ExtraFeatureButton onClick={handleExtra}/>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <MainHead title="Students" searchTitle="Search Students..." isBtn="1"/>
       <div className="table-wrapper">
         <Table list={list} colNames={colNames} />
       </div>

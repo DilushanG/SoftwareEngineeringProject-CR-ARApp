@@ -9,6 +9,7 @@ import React, { useState } from 'react';
 import "../Styles/main.css"
 import AdvisorTable from "./AdvisorTable";
 import EditAdvisor from "./EditAdvisorButton";
+import MainHead from "./MainHead";
 
 function advisor(){
 
@@ -36,33 +37,17 @@ function advisor(){
 
       const colNames = [' ','REG_NUMBER','NAME','ADVISOR'];
 
-    return(
-        <div>
-        <div className="advbox" >
-            <div className="advisorTitle" >
-            Advisors
-            </div>
-        <div className="SearchBar" >
-        <SearchBar onSearch={handleSearch} name="Search advisors..." />
-        <div className="box-2">
-        <div className="h-2">
-        <DropDownYear/>
-        <DropDownSemester/>
-        <DropDownDepartment/>
-        </div>
-        </div>
-        </div>
-        </div>
+    return (
+      <div>
+        <MainHead title="Advisors" searchTitle="Search Advisors..." isBtn="0" />
 
-        <div className = "advtable">
-        <AdvisorTable list={list} colNames={colNames} />
-        <div>
+        <div className="advtable">
+          <AdvisorTable list={list} colNames={colNames} />
+          <div>
             <EditAdvisor Button onClick={handleEditAdvisor} />
+          </div>
         </div>
-        </div>
-        
-        
-        </div>
+      </div>
     );
 }
 export default advisor;
