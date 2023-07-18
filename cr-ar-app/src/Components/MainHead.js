@@ -5,6 +5,7 @@ import { FiPlus } from "react-icons/fi";
 import DropDownDepartment from "./DropDownDepartment";
 import DropDownSemester from "./DropDownSemester";
 import DropDownYear from "./DropDownYear";
+import DropDown from "./DropDown";
 
 function MainHead({title,searchTitle}) {
     const handleSearch = (searchTerm) => {
@@ -44,9 +45,7 @@ function MainHead({title,searchTitle}) {
       <div className="box-1">
         <div className="dropdown-wrapper">
           <div className="h-1">
-            <DropDownYear />
-            <DropDownDepartment />
-            <DropDownSemester />
+            <DropDown/>
           </div>
         </div>
         <div>
