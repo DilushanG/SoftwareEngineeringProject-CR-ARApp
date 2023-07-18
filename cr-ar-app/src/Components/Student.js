@@ -5,11 +5,15 @@ import DropDownYear from "./DropDownYear";
 import React from "react";
 import "../Styles/main.css";
 import "../Styles/HomeStyles.css";
+import"../Styles/NewSemesterStyles.css";
+import '../Styles/ExtraFeatureButton.css';
+
 
 import DropDownDepartment from "./DropDownDepartment";
 import DropDownSemester from "./DropDownSemester";
 import Table from "./Table";
 import { Icon1, Icon2 } from "./MyIcon";
+import ExtraFeatureButton from "./ExtraFeatureButton";
 
 function Student() {
   const handleNewStudent = () => {
@@ -20,6 +24,10 @@ function Student() {
     // Perform search logic here using the searchTerm
     console.log("Search term:", searchTerm);
   };
+
+  const handleExtra = (viewing) =>{
+    console.log('view:', viewing);
+  }
 
   const list = [
     {
@@ -72,7 +80,7 @@ function Student() {
   return (
     <div>
       <div className="box">
-        <div className="studentTitle">students</div>
+        <div className="studentTitle">Students</div>
         <div className="SearchBar">
           <SearchBar onSearch={handleSearch} name="Search student" />
           <div className="box">
@@ -82,13 +90,13 @@ function Student() {
                 <DropDownYear />
                 <DropDownDepartment />
                 <DropDownSemester />
+                <ExtraFeatureButton onClick={handleExtra}/>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div className="table">
+      <div className="table-wrapper">
         <Table list={list} colNames={colNames} />
       </div>
     </div>
