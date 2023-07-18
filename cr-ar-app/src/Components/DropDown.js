@@ -3,10 +3,14 @@ import Select from "react-select";
 import makeAnimated from 'react-select/animated';
 import "../Styles/DDStyles.css";
 
-function DropDown() {
+function DropDown({year,semester,department}) {
   const [value1, setValue1] = useState(null);
   const [value2, setValue2] = useState(null);
   const [value3, setValue3] = useState(null);
+
+  year = value1;
+  semester = value2;
+  department = value3;
 
   const options = [
     { value: "1", label: "2019/2020" },
