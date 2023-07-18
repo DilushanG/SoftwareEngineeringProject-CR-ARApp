@@ -24,11 +24,25 @@ export const Icon2 = () => (
   </svg>
 );
 
+const handleButtonClick = () => {
+  // Add your logic for the button click event here
+  console.log('Button clicked!');
+};
+
+
+export const Icon3 = () => (
+  <button onClick={handleButtonClick} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 36 22" fill="none">
+      <path d="M18.135 0C6.75 0 0 11 0 11C0 11 6.75 22 18.135 22C29.25 22 36 11 36 11C36 11 29.25 0 18.135 0ZM18 3.66667C22.995 3.66667 27 6.96667 27 11C27 15.07 22.995 18.3333 18 18.3333C13.05 18.3333 9 15.07 9 11C9 6.96667 13.05 3.66667 18 3.66667ZM18 7.33333C15.525 7.33333 13.5 8.98333 13.5 11C13.5 13.0167 15.525 14.6667 18 14.6667C20.475 14.6667 22.5 13.0167 22.5 11C22.5 10.6333 22.32 10.3033 22.23 9.97333C21.87 10.56 21.15 11 20.25 11C18.99 11 18 10.1933 18 9.16667C18 8.43333 18.54 7.84667 19.26 7.55333C18.855 7.44333 18.45 7.33333 18 7.33333Z" fill="black" />
+    </svg>
+  </button>
+);
 const MyIcon = () => (
   <div>
     {/* Here you can render both icons */}
     <Icon1 />
     <Icon2 />
+    <Icon3 />
   </div>
 );
 

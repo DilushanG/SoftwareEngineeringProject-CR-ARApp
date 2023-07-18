@@ -12,7 +12,7 @@ import '../Styles/ExtraFeatureButton.css';
 import DropDownDepartment from "./DropDownDepartment";
 import DropDownSemester from "./DropDownSemester";
 import Table from "./Table";
-import { Icon1, Icon2 } from "./MyIcon";
+import { Icon1, Icon2, Icon3 } from "./MyIcon";
 import ExtraFeatureButton from "./ExtraFeatureButton";
 import MainHead from "./MainHead";
 
@@ -40,7 +40,7 @@ function Student() {
       EC10218: <Icon1 />,
       EC1078: <Icon1 />,
       Advisor: "jananie",
-      View: "ss",
+      View: <Icon3 />,
     },
     {
       Registration_No: "2019/E/114",
@@ -51,7 +51,7 @@ function Student() {
       EC10218: <Icon1 />,
       EC1078: <Icon1 />,
       Advisor: "jananie",
-      View: "ss",
+      View: <Icon3 />,
     },
     {
       Registration_No: "2019/E/039",
@@ -62,7 +62,7 @@ function Student() {
       EC10218: <Icon1 />,
       EC1078: <Icon2 />,
       Advisor: "jananie",
-      View: "ss",
+      View: <Icon3 />,
     },
   ];
 
