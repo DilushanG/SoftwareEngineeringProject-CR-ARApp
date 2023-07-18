@@ -123,10 +123,11 @@ function NewSemester() {
       .catch((err) => console.log(err));
   }, []);
 
-
-
   return (
     <>
+      <div className="title-wrapper">
+          <p className="title-wrapper-2">New Semester</p>
+      </div>
       <div className="table-wrapper">
         {data.length > 0 && (
           <table className="table">
@@ -160,11 +161,6 @@ function NewSemester() {
             </tbody>
           </table>
         )}
-      </div>
-      <div className="search-bar-search-bar">
-        <div className="search-bar-frame-5077x">
-          <p className="search-bar-students">Add New Semester</p>
-        </div>
       </div>
       <div className="button-button-wrapper">
         <div className="button-wrapper">

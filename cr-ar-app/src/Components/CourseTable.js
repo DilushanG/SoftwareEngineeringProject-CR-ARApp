@@ -66,7 +66,7 @@ import ExtraFeatureButton from "./ExtraFeatureButton";
         <div>
           <DownloadButton onClick={handledownload} />
         </div>
-        <MainHead title="Courses" searchTitle="Search Courses..." />
+        <MainHead title="Courses" searchTitle="Search Courses..." isBtn="0"/>
         </div>
         
         

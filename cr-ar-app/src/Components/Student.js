@@ -80,7 +80,7 @@ function Student() {
 
   return (
     <div>
-      <MainHead title="Students" searchTitle="Search Students..." />
+      <MainHead title="Students" searchTitle="Search Students..." isBtn="1"/>
       <div className="table-wrapper">
         <Table list={list} colNames={colNames} />
       </div>
