@@ -5,7 +5,7 @@ var app = express();
 app.use(cors());
 var db = require("./database");
 
-app.get("/",(req, res) => {
+app.get("/course",(req, res) => {
   let sql = "SELECT * FROM course";
   db.query(sql, (err, results) => {
     if (err) return res.json(err);
