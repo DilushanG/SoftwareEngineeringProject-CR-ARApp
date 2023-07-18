@@ -122,6 +122,7 @@ function NewSemester() {
       })
       .catch((err) => console.log(err));
   }, []);
+  
 
   return (
     <>

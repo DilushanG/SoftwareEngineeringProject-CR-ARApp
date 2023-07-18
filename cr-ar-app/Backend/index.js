@@ -14,13 +14,6 @@ app.get("/courses",(req, res) => {
   });
 });
 
-app.listen(3300, function () {
-  console.log("App Listening on port 3300");
-  db.connect(function (err) {
-      if (err) throw (err);
-      console.log('Database Connected');
-  })
-});
 
 app.get("/courseTable",(req, res)=>{
   console.log("course table view");
@@ -30,3 +23,21 @@ app.get("/courseTable",(req, res)=>{
     return res.json(results);
   });
 });
+
+app.get("/academicYear", (req, res) => {
+  console.log("Academic Year Got");
+  let sql = "SELECT DISTINCT AcYr FROM student_university_details";
+  db.query(sql, (err, results) => {
+    if (err) return res.json(err);
+    return res.json(results);
+  });
+});
+
+app.listen(3300, function () {
+  console.log("App Listening on port 3300");
+  db.connect(function (err) {
+    if (err) throw err;
+    console.log("Database Connected");
+  });
+});
+
