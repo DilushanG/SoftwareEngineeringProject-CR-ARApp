@@ -2,7 +2,7 @@ import "../Styles/StudentStyle.css";
 import SearchBar from './SearchBar';
 
 import DropDownYear from "./DropDownYear";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "../Styles/main.css"
 import "../Styles/HomeStyles.css";
 import Table from "./Table";
@@ -41,8 +41,21 @@ import ExtraFeatureButton from "./ExtraFeatureButton";
     { Course: "Software Construction",Code: "EC1010",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System", RegistrationDate: "10.01.2023-30.01.2023", Status: "Close"}
   ];
   
-  const colNames = ['Course','Code','Credit','Core/Technical','Coordinator','Prerequiste','RegistrationDate','Status'];
+  const colNames = ['Code','Name','Credit','Core/Technical','Coordinator','Prerequiste','Offered sem','Offered Dept ID','AC yr','Sem start Date', 'Sem End Date'];
     
+  
+  const [Data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3300/courseTable")
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+  
+
     return (
       
       <div>
@@ -64,7 +77,7 @@ import ExtraFeatureButton from "./ExtraFeatureButton";
         </div>
         </div>
         <div>
-        <Table list={list} colNames={colNames}/>
+        <Table list={Data} colNames={colNames}/>
         <div>
           <DownloadButton onClick={handledownload} />
         </div>
