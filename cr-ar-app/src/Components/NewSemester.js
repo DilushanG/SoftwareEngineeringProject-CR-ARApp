@@ -16,81 +16,6 @@ import DropDown from "./DropDown";
 function NewSemester() {
   const [modalOpen, setModalOpen] = useState(false);
 
-  const list = [
-    {
-      Code: "EC1010",
-      Course: "Software Construction",
-      Credit: "3",
-      Core: "Core",
-      Coordinator: "jananie",
-      Prerequiste: "Operating System",
-      Status: "Remove",
-    },
-    {
-      Code: "EC1010",
-      Course: "Software Construction",
-      Credit: "3",
-      Core: "Core",
-      Coordinator: "jananie",
-      Prerequiste: "Operating System",
-      Status: "Remove",
-    },
-    {
-      Code: "EC1010",
-      Course: "Software Construction",
-      Credit: "3",
-      Core: "Technical",
-      Coordinator: "jananie",
-      Prerequiste: "Operating System",
-      Status: "Remove",
-    },
-    {
-      Code: "EC1010",
-      Course: "Software Construction",
-      Credit: "3",
-      Core: "Core",
-      Coordinator: "jananie",
-      Prerequiste: "Operating System",
-      Status: "Remove",
-    },
-    {
-      Code: "EC1010",
-      Course: "Software Construction",
-      Credit: "3",
-      Core: "Technical",
-      Coordinator: "jananie",
-      Prerequiste: "Operating System",
-      Status: "Remove",
-    },
-    {
-      Code: "EC1010",
-      Course: "Software Construction",
-      Credit: "3",
-      Core: "Technical",
-      Coordinator: "jananie",
-      Prerequiste: "Operating System",
-      Status: "Remove",
-    },
-    {
-      Code: "EC1010",
-      Course: "Software Construction",
-      Credit: "3",
-      Core: "Core",
-      Coordinator: "jananie",
-      Prerequiste: "Operating System",
-      Status: "Remove",
-    },
-    {
-      Code: "EC1010",
-      Course: "Software Construction",
-      Credit: "3",
-      Core: "Core",
-      Coordinator: "jananie",
-      Prerequiste: "Operating System",
-      Status: "Remove",
-    },
-  ];
-
   const colNames = [
     "Code",
     "Course",
@@ -103,7 +28,7 @@ function NewSemester() {
 
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3300/courses")
+    fetch("http://localhost:3300/updated")
       .then((res) => res.json())
       .then((data) => {
         // Extracting only the first 5 columns and the last column from each row of data

@@ -2,15 +2,12 @@ import React, { useState, useEffect } from "react";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
 import "../Styles/DDStyles.css";
+import axios from "axios";
 
 function DropDown({ year, semester, department }) {
   const [value1, setValue1] = useState(null);
   const [value2, setValue2] = useState(null);
   const [value3, setValue3] = useState(null);
-
-  year = value1;
-  semester = value2;
-  department = value3;
 
   const options2 = [
     { value: "1", label: "Semester 1" },
@@ -52,7 +49,6 @@ function DropDown({ year, semester, department }) {
     label: opts.AcYr,
   }));
 
-
   function customTheme(theme) {
     return {
       ...theme,
@@ -64,12 +60,40 @@ function DropDown({ year, semester, department }) {
     };
   }
 
+  year = value1;
+  semester = value2;
+  department = value3;
+
+  console.log("Year", year);
+  console.log("Semester", semester);
+  console.log("Department", department);
+
+  useEffect(() => {
+    if (value1 && value2 && value3) {
+      submitReview();
+    }
+  }, [value1, value2, value3]);
+
+  const submitReview = () => {
+    axios.post("http://localhost:3300/coursesUpdated", {
+      AcYr: value1.value,
+      OfferedSem: value2.value,
+      OfferedDeptID: value3.value,
+    })
+    .then(() => {
+      alert("successful read");
+    })
+    .catch((error) => {
+      console.error("Error submitting review:", error);
+    });
+  };
+
   return (
     <div className="dd-wrapper">
       <Select
         components={makeAnimated}
         options={values}
-        Value={value1}
+        defaultValue={value1}
         placeholder="Select the Academic Year"
         onChange={setValue1}
         isSearchable
@@ -90,7 +114,7 @@ function DropDown({ year, semester, department }) {
         components={makeAnimated}
         options={options3}
         defaultValue={value3}
-        placeholder="Select the Deaprtment"
+        placeholder="Select the Department"
         onChange={setValue3}
         isSearchable
         className="mb-3"
@@ -101,3 +125,4 @@ function DropDown({ year, semester, department }) {
 }
 
 export default DropDown;
+
