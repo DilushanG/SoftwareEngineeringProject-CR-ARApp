@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
 
 
-.box{
+.advbox{
 
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
     width: 206px;
     height: 50px;
     flex-shrink: 0;
     position: fixed;
     top: 100px;
-    left: 3%;
+    left: 10%;
    
     color: #009687;
     font-family: Work Sans;
@@ -22,7 +22,7 @@
     letter-spacing: -0.6px;
 }
 
-.box .advisorTitle{
+.advbox .advisorTitle{
     color: #009687;
     font-family: Work Sans;
     font-size: 30px;

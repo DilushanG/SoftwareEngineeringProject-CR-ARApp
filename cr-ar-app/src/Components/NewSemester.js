@@ -2,7 +2,7 @@ import "../Styles/NewSemesterStyles.css";
 import SearchBar from "./SearchBar";
 import NewStudentButton from "./NewStudentButton";
 import DropDownYear from "./DropDownYear";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../Styles/main.css";
 import "../Styles/HomeStyles.css";
 
@@ -11,91 +11,51 @@ import DropDownSemester from "./DropDownSemester";
 import Table from "./Table";
 import MainHead from "./MainHead";
 import Modal from "./Modal";
+import DropDown from "./DropDown";
 
 function NewSemester() {
   const [modalOpen, setModalOpen] = useState(false);
-
-  const list = [
-    {
-      Code: "EC1010",
-      Course: "Software Construction",
-      Credit: "3",
-      Core: "Core",
-      Coordinator: "jananie",
-      Prerequiste: "Operating System",
-      Status: "Remove",
-    },
-    {
-      Code: "EC1010",
-      Course: "Software Construction",
-      Credit: "3",
-      Core: "Core",
-      Coordinator: "jananie",
-      Prerequiste: "Operating System",
-      Status: "Remove",
-    },
-    {
-      Code: "EC1010",
-      Course: "Software Construction",
-      Credit: "3",
-      Core: "Technical",
-      Coordinator: "jananie",
-      Prerequiste: "Operating System",
-      Status: "Remove",
-    },
-    {
-      Code: "EC1010",
-      Course: "Software Construction",
-      Credit: "3",
-      Core: "Core",
-      Coordinator: "jananie",
-      Prerequiste: "Operating System",
-      Status: "Remove",
-    },
-    {
-      Code: "EC1010",
-      Course: "Software Construction",
-      Credit: "3",
-      Core: "Technical",
-      Coordinator: "jananie",
-      Prerequiste: "Operating System",
-      Status: "Remove",
-    },
-    {
-      Code: "EC1010",
-      Course: "Software Construction",
-      Credit: "3",
-      Core: "Technical",
-      Coordinator: "jananie",
-      Prerequiste: "Operating System",
-      Status: "Remove",
-    },
-    {
-      Code: "EC1010",
-      Course: "Software Construction",
-      Credit: "3",
-      Core: "Core",
-      Coordinator: "jananie",
-      Prerequiste: "Operating System",
-      Status: "Remove",
-    },
-  ];
 
   const colNames = [
     "Code",
     "Course",
     "Credit",
     "Core/Technical",
-    "Coordinator",
+    "CoordinatorID",
     "Prerequiste",
     "Status",
   ];
 
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:3300/updated")
+      .then((res) => res.json())
+      .then((data) => {
+        // Extracting only the first 5 columns and the last column from each row of data
+        const extractedData = data.map((row) => {
+          const keys = Object.keys(row);
+          const extractedRow = {
+            ...keys.slice(0, 6).reduce((obj, key) => {
+              obj[key] = row[key];
+              return obj;
+            }, {}),
+            [keys[keys.length - 1]]: row[keys[keys.length - 1]],
+          };
+          return extractedRow;
+        });
+        setData(extractedData);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+  
 
   return (
     <>
+      <div className="title-wrapper">
+          <p className="title-wrapper-2">New Semester</p>
+      </div>
       <div className="table-wrapper">
-        {list.length > 0 && (
+        {data.length > 0 && (
           <table className="table">
             <thead>
               <tr>
@@ -107,7 +67,7 @@ function NewSemester() {
               </tr>
             </thead>
             <tbody>
-              {Object.values(list).map((obj, index) => (
+              {Object.values(data).map((obj, index) => (
                 <tr className="expand" key={index}>
                   {Object.values(obj).map((value, index2) => (
                     <td key={index2}>
@@ -128,20 +88,6 @@ function NewSemester() {
           </table>
         )}
       </div>
-      <div className="search-bar-search-bar">
-        <div className="search-bar-frame-5077x">
-          <p className="search-bar-students">Add New Semester</p>
-        </div>
-      </div>
-      <div className="box-1">
-        <div className="dropdown-wrapper">
-          <div className="h-1">
-            <DropDownYear />
-            <DropDownDepartment />
-            <DropDownSemester />
-          </div>
-        </div>
-      </div>
       <div className="button-button-wrapper">
         <div className="button-wrapper">
           <div className="button-h1">
@@ -150,6 +96,11 @@ function NewSemester() {
         </div>
       </div>
       <div className="button-button-wrapper-1">
+        <div className="hn2">
+          <div className="h-n">
+            <DropDown />
+          </div>
+        </div>
         <div className="button-wrapper-1">
           <div className="button-h2">
             <button

@@ -1,17 +1,17 @@
 import React from "react";
-import "../Styles/TableStyles.css";
+import "../Styles/AdvisorTableStyles.css";
 import "../Styles/Tickbox.css";
 
 function AdvisorTable({list, colNames, width = 'auto', height = 'auto'}) {
     return (
         <div>
-        <div className="table-wrapper">
+        <div className="advtable-wrapper">
             {list.length > 0 && (
-                <table className="table">
+                <table className="advtable">
                     <thead>
                         <tr>
                             {colNames.map((headerItem, index) => (
-                                <th className="expand" key={index}>
+                                <th className="advexpand" key={index}>
                                     {headerItem.toUpperCase()}
                                 </th>
                             ))}
@@ -19,7 +19,7 @@ function AdvisorTable({list, colNames, width = 'auto', height = 'auto'}) {
                     </thead>
                     <tbody>
                         {Object.values(list).map((obj, index) => (
-                            <tr className="expand" key={index}>
+                            <tr className="advexpand" key={index}>
                                 <td>
                                 <label>
                                     <input type="checkbox"/>

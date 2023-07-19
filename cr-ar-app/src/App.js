@@ -13,6 +13,10 @@ import CourseTable from "./Components/CourseTable";
 import NewSemester from "./Components/NewSemester";
 import Modal from "./Components/Modal";
 
+import { Route,Routes } from "react-router-dom";
+import DropDown from "./Components/DropDown";
+import MainHead from "./Components/MainHead";
+
 const list = [
   { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Remove"},
   { Code: "EC1010",Course: "Software Construction",Credit: "3",Core: "Core",Coordinator: "jananie",Prerequiste: "Operating System",Status: "Remove"},
@@ -27,12 +31,21 @@ const colNames = ['Code','Course','Credit','Core/Technical','Coordinator','Prere
 
 function App() {
   return (
-    <React.Fragment>
+    <>
       <header>
-        <NavBar/>
+        <NavBar />
       </header>
-      <NewSemester/>
-    </React.Fragment>
+      
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/students" element={<Student />}></Route>
+        <Route path="/courses" element={<CourseTable />}></Route>
+        <Route path="/advisors" element={<Advisor />}></Route>
+        <Route path="/newsemester" element={<NewSemester />}></Route>
+      </Routes> 
+
+      
+    </>
   );
 }
 
